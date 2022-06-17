@@ -29,6 +29,7 @@ class ViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSo
         if textField.text != "" {
             let total = theAmmountText * activeCurrency
             label.text = String(format: "%.2F", total)
+                
         }
     }
    
