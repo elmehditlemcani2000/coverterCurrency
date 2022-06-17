@@ -1,24 +1,81 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="coverterCurrency" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m9O-tz-8v8">
+                                <rect key="frame" x="0.0" y="628" width="390" height="216"/>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00.00" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7a-Di-2oo">
+                                <rect key="frame" x="20" y="144" width="350" height="37"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" selected="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Enter Amount" textAlignment="center" minimumFontSize="17" clearButtonMode="unlessEditing" translatesAutoresizingMaskIntoConstraints="NO" id="3Tq-Jh-IES">
+                                <rect key="frame" x="16" y="282" width="358" height="49"/>
+                                <color key="backgroundColor" systemColor="secondarySystemGroupedBackgroundColor"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" textContentType="flight-number"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" ambiguous="YES" image="cambio" translatesAutoresizingMaskIntoConstraints="NO" id="fVS-in-SjO">
+                                <rect key="frame" x="97" y="439" width="196" height="137"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="m9O-tz-8v8" firstAttribute="top" secondItem="3Tq-Jh-IES" secondAttribute="bottom" constant="299" id="3h9-TN-Scg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s7a-Di-2oo" secondAttribute="trailing" constant="20" id="7sj-H5-oeQ"/>
+                            <constraint firstItem="m9O-tz-8v8" firstAttribute="top" secondItem="3Tq-Jh-IES" secondAttribute="bottom" constant="297" id="90h-0O-Oz8"/>
+                            <constraint firstItem="s7a-Di-2oo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="BtC-fI-Esw"/>
+                            <constraint firstItem="3Tq-Jh-IES" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Dg7-1N-6Gt"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Tq-Jh-IES" secondAttribute="trailing" constant="16" id="FGt-Fo-8c7"/>
+                            <constraint firstItem="3Tq-Jh-IES" firstAttribute="top" secondItem="s7a-Di-2oo" secondAttribute="bottom" constant="101" id="Jff-Zb-JBk"/>
+                            <constraint firstItem="3Tq-Jh-IES" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="K02-tO-ja2"/>
+                            <constraint firstAttribute="bottom" secondItem="m9O-tz-8v8" secondAttribute="bottom" id="Kbr-Hh-UQP"/>
+                            <constraint firstItem="m9O-tz-8v8" firstAttribute="top" secondItem="fVS-in-SjO" secondAttribute="bottom" constant="50" id="NPj-1J-jl9"/>
+                            <constraint firstItem="m9O-tz-8v8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Pi5-Jr-yuV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fVS-in-SjO" secondAttribute="trailing" constant="97" id="WNl-T9-a7G"/>
+                            <constraint firstItem="3Tq-Jh-IES" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="YYE-Sn-1qw"/>
+                            <constraint firstItem="s7a-Di-2oo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="100" id="b96-WZ-PId"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3Tq-Jh-IES" secondAttribute="trailing" constant="16" id="bXQ-Vy-xbV"/>
+                            <constraint firstItem="fVS-in-SjO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="97" id="nwS-BQ-wKX"/>
+                            <constraint firstItem="m9O-tz-8v8" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uPc-mC-xxr"/>
+                            <constraint firstItem="3Tq-Jh-IES" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="y65-kR-WJH"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="label" destination="s7a-Di-2oo" id="hGd-7h-W7j"/>
+                        <outlet property="pickerView" destination="m9O-tz-8v8" id="MBn-NV-4Rl"/>
+                        <outlet property="textField" destination="3Tq-Jh-IES" id="YSe-Ej-YDN"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="20" y="67.535545023696685"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="cambio" width="75" height="75"/>
+        <systemColor name="secondarySystemGroupedBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
